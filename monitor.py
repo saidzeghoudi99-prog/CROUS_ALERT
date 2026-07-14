@@ -17,11 +17,13 @@ CROUS_URL = (
 )
 
 RESIDENCES = [
+    "logement",
     "Le Dragueur",
     "Flora Tristan",
     "Les Aunettes",
     "Marguerite Yourcenar",
 ]
+
 
 
 def normalize_text(text: str) -> str:
