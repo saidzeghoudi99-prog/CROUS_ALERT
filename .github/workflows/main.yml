@@ -6,9 +6,13 @@ on:
   schedule:
     - cron: "*/1 * * * *"
 
+permissions:
+  contents: read
+
 jobs:
   surveillance:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - name: Récupérer les fichiers du dépôt
@@ -19,8 +23,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Installer les dépendances
+      - name: Installer les dépendances Python
         run: pip install -r requirements.txt
+
+      - name: Installer Chromium
+        run: playwright install --with-deps chromium
 
       - name: Vérifier les logements CROUS
         env:
