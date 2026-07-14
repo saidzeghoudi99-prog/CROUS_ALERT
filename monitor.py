@@ -17,7 +17,6 @@ CROUS_URL = (
 )
 
 RESIDENCES = [
-    "logement",
     "Le Dragueur",
     "Flora Tristan",
     "Les Aunettes",
