@@ -12,8 +12,6 @@ from playwright.sync_api import sync_playwright
 
 CROUS_URL = (
     "https://trouverunlogement.lescrous.fr/tools/47/search"
-    "?bounds=2.4130316_48.6485333_2.4705092_48.6109217"
-    "&locationName=%C3%89vry+%2891000%29"
 )
 
 RESIDENCES = [
